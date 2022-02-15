@@ -1,7 +1,7 @@
 //Change CSS values in JavaScript by getting reference to them 
 //through the DOM and setting a new value to their CSS 
 //properties:
-const rotate = document.getElementByClassName("rotate")
+
 const second = document.getElementById("second")
 const minute = document.getElementById("minute")
 const hour = document.getElementById("hour")
