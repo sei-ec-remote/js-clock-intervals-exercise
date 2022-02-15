@@ -2,21 +2,31 @@ const hourImg = document.querySelector('#hour')
 const minuteImg = document.querySelector('#minute')
 const secondImg = document.querySelector('#second')
 
-let hourDegrees = 30
-let minuteDegrees = 6
-let secondDegrees = 6
+const secondRotation = (seconds) => {
+    return (seconds / 60) * 360
+}
 
-setInterval( () => {
-    secondImg.style.transform = "rotate(" + secondDegrees + "deg)"
-    secondDegrees += 6
-}, 1000)
+const hourRotation = (hours) => {
+    return (hours / 12) * 360
+}
 
-setInterval( () => {
-    minuteImg.style.transform = "rotate(" + minuteDegrees + "deg)"
-    minuteDegrees += 6
-}, 60010)
+const setClock = () => {
+    const time = new Date()
+    let seconds = time.getSeconds()
+    let minutes = time.getMinutes()
+    let hours = time.getHours() - 12
 
-setInterval( () => {
-    hourImg.style.transform = "rotate(" + hourDegrees + "deg)"
-    hourDegrees += 30
-}, 3600010)
+    let secDeg = secondRotation(seconds)
+    let minDeg = secondRotation(minutes)
+    let hourDeg = hourRotation(hours)
+
+    console.log(`Hour: ${hours} Minutes: ${minutes} Seconds: ${seconds}`)
+
+    secondImg.style.transform = "rotate(" + secDeg + "deg)"
+    minuteImg.style.transform = "rotate(" + minDeg + "deg)"
+    hourImg.style.transform = "rotate(" + hourDeg + "deg)"
+
+    setTimeout(setClock, 1000)
+}
+
+setClock()
