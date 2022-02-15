@@ -1,14 +1,36 @@
 #clock {
+    position: relative;  
 }
 
 #clock img {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #hour {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #minute {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #second {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* add .rotate with transform: rotate(45deg) */
+
+.rotate {
+    transform: rotate(45deg)
 }
