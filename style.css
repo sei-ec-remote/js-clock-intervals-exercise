@@ -1,14 +1,27 @@
 #clock {
+
 }
 
 #clock img {
 }
 
+/* write code to stack clock hands on top of clock face */
+
 #hour {
+    display: flex;
+    position: absolute;
+    transform: rotate();
 }
 
 #minute {
+    display: flex;
+    position: absolute;
+    transform: rotate();
+}
+                    
+#second {
+    display: flex;
+    position: absolute;
+    transform: rotate();
 }
 
-#second {
-}
