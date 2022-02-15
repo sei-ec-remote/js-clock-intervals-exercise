@@ -4,8 +4,8 @@ const hour = document.getElementById("#hour")
 
 
 secondRotation = 6 ;
-minuteRotation = 6 ;
-hourRotation = 6 ;
+minuteRotation = 72 ;
+hourRotation = 126 ;
 
 const secondHand = () => {
     document.querySelector("#second").style.transform = `rotate(${secondRotation}deg)` ;
