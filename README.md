@@ -29,7 +29,7 @@ their CSS properties:
 let degrees = 45;
 
 const el = document.getElementById("myElement")
-el.style.transform = "rotate(" + degrees + "deg)"
+el.style.transform = "rotate"( + degrees + "deg)"
 ```
 
 It would be useful to define functions that convert
