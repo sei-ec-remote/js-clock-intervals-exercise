@@ -12,6 +12,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: rotate(126deg);
 }
 
 
@@ -19,6 +20,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: rotate(72deg);
 }
 
 
