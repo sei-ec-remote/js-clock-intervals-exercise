@@ -34,7 +34,7 @@ const secondCounter = setInterval(()  => {
     rotateSec.style.transform = "rotate(" + secondRotation + "deg)"
 },1000)
 
-let minuteNumber = 0 
+let minuteNumber = 1
 const minuteCounter  = setInterval(()  => {
     ('This shows the minutes number', minuteNumber)
 const minuteRotation =  ( minuteNumber / 60) * 360
@@ -42,7 +42,7 @@ minuteNumber++
     rotateMin.style.transform = "rotate(" + minuteRotation + "deg)"
 },60000)
 
-let hourNumber = 0
+let hourNumber = 1
 const hourCounter  =  setInterval(()  => {
     console.log('This shows the hour number',hourNumber)
 const hourRotation =  (hourNumber / 12) * 360
