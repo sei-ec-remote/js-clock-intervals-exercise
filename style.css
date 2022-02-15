@@ -1,14 +1,29 @@
-#clock {
+/*#clock {
 }
+*/
+#face {
 
-#clock img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 #hour {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
+
 
 #minute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
+
 #second {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
