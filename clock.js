@@ -25,8 +25,11 @@ const rotateHour = document.querySelector('.rotateHour')
     // secondRotation(59) // returns (59 / 60) * 360 
     // hourRotation(12) // returns 0
     // hourRotation(5) // returns (5 / 12) * 360
+//1000ms = 1sec
+//6000ms = 1min
+//3600000 - 1hour
 
-let secondsNumber = 0 
+let secondsNumber = 0
 const secondCounter = setInterval(()  => {
     console.log('This shows the seconds number', secondsNumber)
     const secondRotation =  ( secondsNumber / 60) * 360
@@ -40,7 +43,7 @@ const minuteCounter  = setInterval(()  => {
 const minuteRotation =  ( minuteNumber / 60) * 360
 minuteNumber++
     rotateMin.style.transform = "rotate(" + minuteRotation + "deg)"
-},60000)
+},61000)
 
 let hourNumber = 1
 const hourCounter  =  setInterval(()  => {
@@ -48,18 +51,6 @@ const hourCounter  =  setInterval(()  => {
 const hourRotation =  (hourNumber / 12) * 360
 hourNumber++
     rotateHour.style.transform = "rotate(" + hourRotation + "deg)"
-},3600000)
+},3660000)
 
-
-// setTimeout(() => {
-//     clearInterval(secondCounter)
-//   }, 1000)
-  
-//   setTimeout(() => {
-//     clearInterval(minuteCounter)
-//   }, 60000)
-  
-//   setTimeout(() => {
-//     clearInterval(hourCounter)
-//   }, 3600000)
   
