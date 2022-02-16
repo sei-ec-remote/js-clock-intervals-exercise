@@ -19,6 +19,6 @@
     z-index: 3;
 }
 
-#rotate {
+.rotate {
     transform: rotate(45deg)
   }
