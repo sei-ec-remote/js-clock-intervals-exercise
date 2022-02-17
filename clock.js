@@ -14,16 +14,20 @@ const countSec = setInterval(() => {
 
     const hours = todaysTime.getHours()
     console.log(hours)
-    const hourRotations = todaysTime.getHours()/12 * 360 - 90;
+    const hourRotations = todaysTime.getHours()/24 * (360 -90);
+
     const secs = todaysTime.getSeconds()
+
     console.log(secs)
     const secondRotations = todaysTime.getSeconds()/60 * 360 - 90;
+
     const mins = todaysTime.getMinutes()
-    console.log(mins)
-    const minuteRotations = todaysTime.getMinutes()/60 * 360 - 90;
+
+    console.log(`It is this time in minutes`,mins)
+    const minuteRotations = todaysTime.getMinutes()/60 * 360;
 
     min.style.transform = "rotate(" + minuteRotations + "deg)"
-   console.log(minuteRotations)
+   console.log(`These are the minutes`,minuteRotations)
     sec.style.transform = "rotate(" + secondRotations + "deg)"
     console.log(secondRotations)
     hour.style.transform = "rotate(" + hourRotations + "deg)"
