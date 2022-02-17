@@ -12,41 +12,26 @@ const minuteHand = document.getElementById('minute')
 // hourRotation(12) // returns 0
 // hourRotation(5) // returns (5 / 12) * 360
 // ```
-
-// function to count from 0 to 60
-let countUpToSixty = () => {
-    let count = 0
-    count++
-    if (count === 60){
-        return
-    }
-    return count
+let seconds = 0;
+let secondRotation = (seconds) => {
+    return seconds * 6
 }
 
-// function to count from 0 to 12
-let countUpToTwelve = () => {
-    let count = 0
-    count = count++
-    if (count === 12){
-        return
-    }
-    return count
-}
-let secMinRotation = (secMin) => {
-    return (secMin() / 60) * 360
+
+let minuteRotation = (minutes) => {
+    // secMin = 0
+    // let degrees = (secMin / 60) * 360
+    // secMin++
+    return minutes * 6
 }
 
 let hourRotation = (hours) => {
-    return (hours() / 12) * 360
+    // hour = 0
+    // let degrees = (hour / 60) * 360
+    // hour++
+    return hours * 30
 }
 
-let secMinDegrees = secMinRotation(countUpToSixty)
-
-let hourDegrees = hourRotation(countUpToTwelve)
-
-setInterval(secMinRotation, 1000)
-setInterval(secMinRotation, 60000)
-setInterval(hourRotation, 3600000)
 
 // Change CSS values in JavaScript by getting reference
 // to them through the DOM and setting a new value to
@@ -60,20 +45,30 @@ setInterval(hourRotation, 3600000)
 // write code to make hands tick using intervals
 // this code will will run code to tell CSS to rotate hands
 
-const secondTick = () => {
-    secondHand.style.transform = "rotate(" + secMinDegrees + "deg)"
+// variable to keep track of time
+
+let secondTick = (seconds) => {
+    secondHand.style.transform = "rotate(" + secondRotation(seconds) + "deg)"
+    
 }
 
-const minuteTick = () => {
-    minuteHand.style.transform = "rotate(" + secMinDegrees + "deg)"
+let minuteTick = (minutes) => {
+    minuteHand.style.transform = "rotate(" + minuteRotation(minutes) + "deg)"
 }
 
-const hourTick = () => {
-    hourHand.style.transform = "rotate(" + hourDegrees + "deg)"
+let hourTick = (hours) => {
+    hourHand.style.transform = "rotate(" + hourRotation(hours) + "deg)"
 }
 
 // code to set intervals and run code at specified times
+// setInterval(secondTick, 1000)
+// setInterval(minuteTick, 60000)
+// setInterval(hourTick, 3600000)
 
-secondTick()
-minuteTick()
-hourTick()
+setInterval(() => {
+    seconds++
+    // want variable to increment when the hands tick
+    secondTick(seconds)
+    minuteTick(seconds / 60)
+    hourTick(seconds / 3600)
+}, 1000)

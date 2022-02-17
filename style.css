@@ -10,18 +10,18 @@
 #hour {
     display: flex;
     position: absolute;
-    transform: rotate();
+    
 }
 
 #minute {
     display: flex;
     position: absolute;
-    transform: rotate();
+    
 }
                     
 #second {
     display: flex;
     position: absolute;
-    transform: rotate();
+    
 }
 
