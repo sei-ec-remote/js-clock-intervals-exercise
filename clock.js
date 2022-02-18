@@ -9,23 +9,39 @@ const rotateDegrees = (hand,degrees) => {
     hand.style.transform = `rotate(${degrees}deg)`
 }
 
+// starting point to add degrees
+let defaultSecondDeg = 0
+let defaultMinuteDeg = 0
+let defaultHourDeg = 0
 // create constant variables for degrees rotation every second
 // second hand --> full rotation has 60 moves
 // second hand --> there are 360 degrees in a circle
-const secondDegrees = i => {
-    return (i/60) * 360
+const secondDegrees = () => {
+    if(defaultSecondDeg === 60){
+        defaultSecondDeg = 0
+    }
+    defaultSecondDeg += 1
+        return (defaultSecondDeg/60) * 360
 }
 
 // minute hand --> full rotation has 60 moves
 // minute hand --> there are 360 degrees in a circle
-const minuteDegrees = i => {
-    return (i/60) * 360
+const minuteDegrees = () => {
+    if(defaultMinuteDeg === 60){
+        defaultSecondDeg = 0
+    }
+    defaultMinuteDeg += 1
+    return (defaultMinuteDeg/60) * 360  
 }
 
 // hour hand --> full rotation is 12 moves
 // hour hand --> there are 360 degrees in a circle
-const hourDegrees = i => {
-    return (i/12) * 360
+const hourDegrees = () => {
+    if(defaultHourDeg === 60){
+        defaultHourDeg = 0
+    }
+    defaultHourDeg += 1
+    return (defaultHourDeg/12) * 360  
 }
 
 
@@ -39,21 +55,18 @@ const tick = () => console.log('tick')
 
 setInterval(tick, 1000)
 
-for (let i = 0; i < 60; i++){
-    let moveSecondHand = rotateDegrees(secondHand,secondDegrees(i))
-    setInterval(moveSecondHand,1000)
-    console.log('move second hand to, ', secondDegrees(i))
-}
+const moveSecondHand = () => rotateDegrees(secondHand,secondDegrees())
+setInterval(moveSecondHand,1000)
+console.log('move second hand to, ', secondDegrees())
 
-for (let i = 0; i < 60; i++){
-    let moveMinuteHand = rotateDegrees(minuteHand, minuteDegrees(i))
-    setTimeout(moveMinuteHand, 60000)
-    console.log('move minute hand', minuteDegrees(i))
-}
 
-for (let i = 0; i<12; i++){
-    let moveHourHand = rotateDegrees(hourHand, hourDegrees(i))
-    setTimeout(moveHourHand, 60*60000)
-    console.log('move hour hand', hourDegrees(i))
-}
+const moveMinuteHand = () => rotateDegrees(minuteHand, minuteDegrees())
+setTimeout(moveMinuteHand, 60000)
+console.log('move minute hand', minuteDegrees())
+
+
+const moveHourHand = () => rotateDegrees(hourHand, hourDegrees())
+setTimeout(moveHourHand, 60*60000)
+console.log('move hour hand', hourDegrees())
+
 })
