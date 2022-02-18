@@ -21,28 +21,37 @@ const secondDegrees = () => {
         defaultSecondDeg = 0
     }
     defaultSecondDeg += 1
-        return (defaultSecondDeg/60) * 360
+    console.log('move second hand to, ', defaultSecondDeg)
+    return (defaultSecondDeg/60) * 360
 }
 
 // minute hand --> full rotation has 60 moves
 // minute hand --> there are 360 degrees in a circle
 const minuteDegrees = () => {
     if(defaultMinuteDeg === 60){
-        defaultSecondDeg = 0
+        defaultMinuteDeg = 0
     }
     defaultMinuteDeg += 1
+    console.log('move minute hand to, ', defaultMinuteDeg)
     return (defaultMinuteDeg/60) * 360  
 }
 
 // hour hand --> full rotation is 12 moves
 // hour hand --> there are 360 degrees in a circle
 const hourDegrees = () => {
-    if(defaultHourDeg === 60){
+    if(defaultHourDeg === 12){
         defaultHourDeg = 0
     }
     defaultHourDeg += 1
+    console.log('move hour hand to, ', defaultHourDeg)
     return (defaultHourDeg/12) * 360  
 }
+
+//create clock hand movement functions
+const moveSecondHand = () => rotateDegrees(secondHand,secondDegrees())
+const moveMinuteHand = () => rotateDegrees(minuteHand, minuteDegrees())
+const moveHourHand = () => rotateDegrees(hourHand, hourDegrees())
+
 
 
 // next we need to implement timing functions
@@ -55,18 +64,10 @@ const tick = () => console.log('tick')
 
 setInterval(tick, 1000)
 
-const moveSecondHand = () => rotateDegrees(secondHand,secondDegrees())
 setInterval(moveSecondHand,1000)
-console.log('move second hand to, ', secondDegrees())
 
-
-const moveMinuteHand = () => rotateDegrees(minuteHand, minuteDegrees())
 setTimeout(moveMinuteHand, 60000)
-console.log('move minute hand', minuteDegrees())
 
-
-const moveHourHand = () => rotateDegrees(hourHand, hourDegrees())
 setTimeout(moveHourHand, 60*60000)
-console.log('move hour hand', hourDegrees())
 
 })
