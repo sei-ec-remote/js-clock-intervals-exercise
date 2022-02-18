@@ -16,7 +16,7 @@ const secondDegrees = i => (i/60) * 360
 
 // minute hand --> full rotation has 60 moves
 // minute hand --> there are 360 degrees in a circle
-const secondDegrees = i => (i/60) * 360
+const minuteDegrees = i => (i/60) * 360
 
 // hour hand --> full rotation is 12 moves
 // hour hand --> there are 360 degrees in a circle
