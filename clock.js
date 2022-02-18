@@ -1,0 +1,1 @@
+// define reference variables to each of the hands
