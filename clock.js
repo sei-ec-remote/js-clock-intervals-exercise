@@ -23,4 +23,10 @@ const minuteDegrees = i => (i/60) * 360
 const hourDegrees = i => (i/12) * 360
 
 
+// next we need to implement timing functions
+// linnk to class docs on timing functions:
+// https://git.generalassemb.ly/sei-ec-remote/callbacks-timing-higher-order-functions/blob/main/timingFunctions.md
 
+setTimeout(rotateDegrees(secondHand,secondDegrees(1)),10000)
+setTimeout(rotateDegrees(minuteHand, minuteDegrees(1)), 10000)
+setTimeout(rotateDegrees(hourHand, hourDegrees(1)), 10000)
