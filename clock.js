@@ -1,7 +1,4 @@
 
-
-
-
 const hour = document.getElementById("hour")
 const minute = document.getElementById("minute")
 const second = document.getElementById("second")
@@ -24,7 +21,7 @@ const tickMin = () => {
     degMin = minutes / 60 * 360
     minute.style.transform = "rotate(" + degMin + "deg)"
     minutes++
-}, 6000) }
+}, 60000) }
 
 tickMin()
 
@@ -35,7 +32,7 @@ const tickHour = () => {
     degHour = hours / 12 * 360
     hour.style.transform = "rotate(" + degHour + "deg)"
     hours++
-}, 36000000) }
+}, 3600000) }
 
 tickHour()
 
