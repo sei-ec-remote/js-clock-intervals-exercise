@@ -3,6 +3,7 @@
 }
 body {
   margin: 8em;
+  background-color: lightblue;
 }
 #clock {
   position: relative;
