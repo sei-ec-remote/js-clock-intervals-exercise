@@ -10,3 +10,6 @@ const hourRotation = currentHour => (currentHour / 12) * 360;
 
 // Minutes calculator to convert current minute to exact degrees position of the minutes hand.
 const minutesRotation = num => (num / 60) * 360;
+
+// Seconds calculator to convert current seconds to exact degrees position of the seconds hand.
+const secondsRotation = num => (num / 60) * 360;
