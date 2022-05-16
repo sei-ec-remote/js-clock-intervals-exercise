@@ -40,7 +40,6 @@ function minute() {
 function hour() {
     console.log(`Ran function hour`);
     hourHand.style.transform = `rotate(${hourLoc}deg)`;
-    // hourLoc += (.1/60.0);
     hourLoc += (0.1/12.0);
     if (hourLoc === 360) {
         hourLoc -= 360;
