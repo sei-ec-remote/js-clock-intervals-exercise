@@ -5,22 +5,44 @@
 currentTime = new Date();
 console.log(currentTime);
 
-
-
-//want to make the minutes go from 0 to 60. 
-
-
-
-
-// Create intervals in the JavaScript file to make the clocks tick.
-
 let degrees = 45;
 
 
-//pulling the hour info
-//set the degree that it should start at
-const hourElement = document.getElementById("hour")
-hourElement.style.transform = "rotate(" + degrees + "deg)"
+
+const runClock = () => {
+    console.log(currentTime);
+    
+}
+
+//take function to run and how often to run
+//
+setInterval(runClock, 1000);
+
+
+
+
+
+
+// const everySecond (currentTime) => {
+
+// //pulling the hour info
+// hourElement = document.getElementById("hour")
+// hourElement.style.transform = "rotate(3deg)"
+
+// minuteElement = document.getElementById("minute")
+// minuteElement.style.transform = ("rotate" + degrees + "deg")
+
+// secondElement = document.getElementById("second")
+// secondElement.style.transform = "rotate(" + degrees + "deg)"
+// console.log()
+
+// }
+
+
+
+//want to make the minutes go from 0 to 60.
+
+// Create intervals in the JavaScript file to make the clocks tick.
 
 // Change CSS values in JavaScript by getting reference to them through the DOM and setting a new value to their CSS properties:
 
