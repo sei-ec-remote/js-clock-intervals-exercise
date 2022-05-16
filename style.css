@@ -17,3 +17,7 @@
 #second {
     position: absolute;
 }
+
+.rotate{
+    transform: rotate(45deg);
+}
