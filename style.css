@@ -18,6 +18,6 @@
 }
 
 #second {
-    position: fixed;
+    /* position: relative; */
     z-index: 3;
 }

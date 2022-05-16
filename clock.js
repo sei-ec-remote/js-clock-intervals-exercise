@@ -1,11 +1,23 @@
 // Second hand
-let secondHand = document.querySelector('#second');
-secondHand = document.getElementById('second');
-console.log(secondHand);
+secondHand = document.getElementById("second");
+
+// Second hand's current location
+secondLoc = 0;
+
+// Minute hand's current location
+minuteLoc = 0;
+
+// Hour hand's current location
+hourLoc = 0;
 
 // Rotate second hand
 function second() {
     console.log(`Ran function second`);
+    secondHand.style.transform = `rotate(${secondLoc}deg)`;
+    secondLoc += 6;
+    if (secondLoc === 360) {
+        secondLoc -= 360;
+    }
 }
 
 // Rotate minute hand
@@ -16,11 +28,8 @@ function second() {
 
 // Use callback function to rotate specified hand
 function rotate(hand) {
-    setTimeout(hand, 1000);
-    setTimeout(hand, 2000);
-    setTimeout(hand, 3000);
-    setTimeout(hand, 4000);
+    setInterval(hand, 1000);
 }
 
-// 
+// Runs the rotate functions (to run indefinitely)
 rotate(second);
