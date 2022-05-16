@@ -3,16 +3,25 @@ body {
 }
 
 #clock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #clock img {
+  /* margin: 0 auto; */
 }
 
 #hour {
+  position: absolute;
 }
 
 #minute {
+  position: absolute;
 }
 
 #second {
+  position: absolute;
 }
