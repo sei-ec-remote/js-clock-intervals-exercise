@@ -2,11 +2,17 @@
   box-sizing: border-box;
 }
 body {
-  margin: 8em;
   background-color: lightblue;
+  background-image: url("https://live.staticflickr.com/2281/2476614742_d88d9a069d_b.jpg");
+  background-size: cover;
 }
 #clock {
+  display: block;
   position: relative;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 #clock img {
@@ -25,6 +31,7 @@ body {
   position: absolute;
   transform: rotate(6deg);
 }
+/* From read me */
 /* .rotate{
     transform: rotate(1deg);
 } */
