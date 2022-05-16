@@ -16,7 +16,7 @@ Use CSS transform rotation to rotate the hands of the
 clock.
 
 ```css
-.rotate {
+.rotate {≠
   transform: rotate(45deg)
 }
 ```
