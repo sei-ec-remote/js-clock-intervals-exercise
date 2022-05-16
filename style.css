@@ -1,14 +1,42 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+
 #clock {
+    height:90vh;
+    width:90vw;
+    overflow: hidden;
+    position: relative;
 }
 
-#clock img {
-}
+#face{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+}
 #hour {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
-
 #minute {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 #second {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
 }
