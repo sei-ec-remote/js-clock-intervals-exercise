@@ -19,10 +19,10 @@ let hours = currentTime.getHours();
   console.log(currentTime);
   //needed to add seconds over 60 since that tells the computer where to put the second hand
   secondElement.style.transform = "rotate(" + ((seconds/60) * 360) + "deg)";
-//
-//   minuteElement.style.transform = "rotate(" + (minutes/60) * 360 + "deg)";
-
-//   hoursElement.style.transform = "rotate(" + degrees + "deg)";
+//minute hand 
+  minuteElement.style.transform = "rotate(" + (minutes/60) * 360 + "deg)";
+//hour hand rotating
+  hoursElement.style.transform = "rotate(" + (hours/12) * 360 + "deg)";
 
 };
 
