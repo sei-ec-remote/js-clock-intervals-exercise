@@ -1,17 +1,30 @@
 #clock {
+    position: relative;
+    align-items: center;
 }
 
+
+
 #clock img {
+    align-items: center;
+    position:absolute;
 }
 
 #hour {
+    align-items: center;
+    position:absolute;
 }
 
 #minute {
+    align-items: center;
+    position:absolute;
 }
 
 #second {
+    align-items: center;
+    position:absolute;
 }
+
 
 /* Use CSS transform rotation to rotate the hands of the clock. */
 .rotate {
