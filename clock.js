@@ -29,4 +29,7 @@ const startClock = () => {
     };
     setTime();
   };
+
+  setInterval(startClock, 1000);
+
   
