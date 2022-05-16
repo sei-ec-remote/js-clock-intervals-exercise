@@ -3,38 +3,51 @@
 
 //setting the current time
 currentTime = new Date();
+//how we access the seconds, minutes and hours
+let seconds = currentTime.getSeconds();
+let minutes = currentTime.getMinutes();
+let hours = currentTime.getHours();
+
 console.log(currentTime);
+//this is a global varible 
+secondElement = document.getElementById("second");
+// //pulling the hour info
+hoursElement = document.getElementById("hour")
+//pulling the minute info
+minuteElement = document.getElementById("minute")
+
+
 
 let degrees = 45;
 
-
-
 const runClock = () => {
-    console.log(currentTime);
-    
-}
+  console.log(seconds);
+//   secondElement.style.transform = "rotate(" + (i / 60) * 360 + "deg)";
+//   hoursElement.style.transform = "rotate(" + degrees + "deg)";
+//   minuteElement.style.transform = "rotate(" + degrees + "deg)";
+
+
+//   secondRotation(0) // returns 0
+//   secondRotation(59) // returns (59 / 60) * 360
+
+
+};
 
 //take function to run and how often to run
 //
 setInterval(runClock, 1000);
 
 
-
-
+// name = "Katy";
+// console.log("Hello " + name + "!")
 
 
 // const everySecond (currentTime) => {
 
-// //pulling the hour info
-// hourElement = document.getElementById("hour")
-// hourElement.style.transform = "rotate(3deg)"
 
-// minuteElement = document.getElementById("minute")
-// minuteElement.style.transform = ("rotate" + degrees + "deg")
 
-// secondElement = document.getElementById("second")
-// secondElement.style.transform = "rotate(" + degrees + "deg)"
-// console.log()
+
+console.log()
 
 // }
 
@@ -48,8 +61,7 @@ setInterval(runClock, 1000);
 
 // It would be useful to define functions that convert seconds, minutes and hours to how many degrees the hand should be rotated around the clock!
 
-// secondRotation(0) // returns 0
-// secondRotation(59) // returns (59 / 60) * 360
+
 // const seconds () => {
 
 // }

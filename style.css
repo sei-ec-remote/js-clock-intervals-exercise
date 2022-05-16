@@ -25,8 +25,5 @@
     position:absolute;
 }
 
-/* Use CSS transform rotation to rotate the hands of the clock. */
-.rotate {
-    transform: rotate(3deg);
-  }
+
 
