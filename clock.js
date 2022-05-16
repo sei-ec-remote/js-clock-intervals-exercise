@@ -1,14 +1,20 @@
 // Second hand
 secondHand = document.getElementById("second");
 
+// Minute hand
+minuteHand = document.getElementById("minute");
+
+// Hour hand
+hourHand = document.getElementById("hour");
+
 // Second hand's current location
-secondLoc = 0;
+let secondLoc = 0;
 
 // Minute hand's current location
-minuteLoc = 0;
+let minuteLoc = 0;
 
 // Hour hand's current location
-hourLoc = 0;
+let hourLoc = 0;
 
 // Rotate second hand
 function second() {
@@ -21,10 +27,25 @@ function second() {
 }
 
 // Rotate minute hand
-
+function minute() {
+    console.log(`Ran function minute`);
+    minuteHand.style.transform = `rotate(${minuteLoc}deg)`;
+    minuteLoc += .1;
+    if (minuteLoc === 360) {
+        minuteLoc -= 360;
+    }
+}
 
 // Rotate hour hand
-
+function hour() {
+    console.log(`Ran function hour`);
+    hourHand.style.transform = `rotate(${hourLoc}deg)`;
+    // hourLoc += (.1/60.0);
+    hourLoc += (0.1/12.0);
+    if (hourLoc === 360) {
+        hourLoc -= 360;
+    }
+}
 
 // Use callback function to rotate specified hand
 function rotate(hand) {
@@ -33,3 +54,5 @@ function rotate(hand) {
 
 // Runs the rotate functions (to run indefinitely)
 rotate(second);
+rotate(minute);
+rotate(hour);
