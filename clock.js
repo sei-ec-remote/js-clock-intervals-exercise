@@ -19,19 +19,20 @@ const rotateImg = (imgID) => {
         if (secPos === 360) {
             secPos = 0
             second = 0
+            //Minute hand's about to move!
+            console.log('Bing!')
         }
         myImg.style.transform = `translate(-50%, -50%) rotate(${secPos}deg)`
 
-        //stuff for minute hand
+    //stuff for minute hand
     } else if (myImg.id === 'minute') {
         minPos += normalRot
         if (minPos === 360) {
             minPos = 0
         }
-        console.log('Bing!')
         myImg.style.transform = `translate(-50%, -50%) rotate(${minPos}deg)`
 
-        //stuff for the hour hand
+    //stuff for the hour hand
     } else {
         hourPos += hourRot
         if (hourPos === 720) {
@@ -41,7 +42,10 @@ const rotateImg = (imgID) => {
         if (hourPos % 30 === 0) {
             let theHour = hourPos / 30
             for (let i = 0; i < theHour; i++) {
-                setTimeout(console.log("BOOOOOOONG.........."), 1500)
+                const bong = () =>{
+                    console.log("BOOOOOOONGGGG....")
+                }
+                setTimeout(bong, 1500)
             }
         }
         myImg.style.transform = `translate(-50%, -50%) rotate(${hourPos}deg)`
@@ -49,6 +53,9 @@ const rotateImg = (imgID) => {
 }
 
 const myClock = () => {
+    //Figure out what time it is
+    setInitialTime()
+
     //function to be called that counts up and calls the rotate image function for clock adjustment
     const countUp = () => {
         second++
@@ -59,17 +66,15 @@ const myClock = () => {
         }
     }
 
-    //If having fun, reduce the second parameter in the method below accordingly. (ie, when working on clock coding projects, set to 5)
+    //If having fun, reduce the 2nd parameter in the method below proportionally in order to accurately represent the feeling of time's passage. (ie, when working on clock coding projects, set to 100)
     setInterval(countUp, 1000)
 }
 
 //function to fetch initial date/time and set the clock
 const setInitialTime = () => {
     let rightNow = new Date()
-    console.log( rightNow.getHours(),rightNow.getMinutes(),rightNow.getSeconds())
 
     //I subtract 1 from each value being constructed when calculating hand positions because the rotate image function adds an increment.
-
     //construct minutes
     let currMin = rightNow.getMinutes()
     minPos = (currMin-1)*6
@@ -95,6 +100,4 @@ let hourPos = 0
 let second = 0
 
 //call the function to start it running
-//myClock()
-setInitialTime()
 myClock()
