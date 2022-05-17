@@ -1,14 +1,28 @@
+body{
+    justify-self: center;
+    align-content: center;
+}
 #clock {
+display: grid;
 }
 
-#clock img {
+#face {
+grid-area: center; 
+
 }
 
 #hour {
+position: relative;
+grid-area: center;
 }
 
 #minute {
+position: relative;
+grid-area: center;
 }
 
 #second {
+position: relative;
+grid-area: center;
 }
+
