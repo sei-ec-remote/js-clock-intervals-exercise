@@ -1,13 +1,36 @@
-
-
-#clock img {
-    position: absolute;
-    margin-left: 35%;
-    margin-top: 5%;
-    
+clock img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+#face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+#second {
+    position: absolute;
+    top: 18%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+
+#minute {
+    position: absolute;
+    top: 18%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+#hour {
+    position: absolute;
+    top: 18%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
 
 
 

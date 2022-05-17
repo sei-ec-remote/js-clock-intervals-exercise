@@ -12,4 +12,4 @@ setInterval(() => {
     hour.style.transform = `rotate(${hourRotation}deg)`;
     minute.style.transform = `rotate(${minuteRotation}deg)`;
     second.style.transform = `rotate(${secondRotation}deg)`;
-});
+},1000);
