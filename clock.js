@@ -35,7 +35,9 @@ const allTime = () => {
     degreesSeconds = secondRotation(date.getSeconds());
 }
 
-//Checks every second for change, changes ids on html
+/*Checks every second for change, 
+changes ids on html
+Makes clock "Tik"*/
 setInterval(() => {
     allTime();
     hourEl.style.transform = "rotate(" + degreesHours + "deg)";
