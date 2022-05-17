@@ -5,7 +5,7 @@ setInterval(() => {
     if (clockObj.second % 60 === 0) {
         clockObj.minute = (clockObj.minute + 1) % 60
         document.getElementById('minute').style.transform = `translate(-50%, -50%) rotate(${clockObj.minute * 6}deg)`
+        document.getElementById('hour').style.transform = `translate(-50%, -50%) rotate(${(clockObj.hour * 30) + (clockObj.minute * 0.5)}deg)`
         if (clockObj.minute % 60 === 0) {
-            clockObj.hour = (clockObj.hour + 1) % 24}}
-            document.getElementById('hour').style.transform = `translate(-50%, -50%) rotate(${(clockObj.hour * 30) + (clockObj.minute * 0.5)}deg)`
-}, 1000)
+            clockObj.hour = (clockObj.hour + 1) % 24}}         
+}, 10)
