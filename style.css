@@ -1,14 +1,31 @@
 #clock {
+    position: relative;
 }
 
 #clock img {
+    position: absolute;
 }
-
+#face {
+    z-index: 1;
+    transition: 
+        tansform 1s;
+}
 #hour {
+    z-index: 2;
+    transition: 
+        tansform 1s;
 }
-
 #minute {
+    z-index: 3;
+    transition: 
+        tansform ease-in-out 1s;
+}
+#second {
+    z-index: 4;
+    transition: 
+        tansform 1s;
 }
 
-#second {
-}
+
+
+
