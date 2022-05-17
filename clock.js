@@ -16,12 +16,9 @@ const hourDegreem = hourRotation(now.getHours(),now.getMinutes());
 
 
 
-hoursArray.style.transform = `rotateZ(${hours + (minutes /12)}degrees)`
-minutesArray.style.transform = `rotateZ(${minutes}degrees)`
-minutesArray.style.transform = `rotateZ(${seconds}degrees)`
-
-}, 0)
-
-
+hoursArray.style.transform = `rotate(${hourDegree}deg)`;
+minutesArray.style.transform = `rotate(${minuteDegree}deg)`;
+minutesArray.style.transform = `rotate(${secondDegree}deg)`;
+}, 1000)
 }
 clock();
