@@ -26,14 +26,21 @@ setInterval(getTime, 1000)
 const digitalHours = document.getElementById('hoursDigital')
 const digitalMinutes = document.getElementById('minutesDigital')
 const digitalSeconds = document.getElementById('secondsDigital')
+const amOrPm = document.getElementById('amOrPm')
 
 const goDigital = () => {
     const digitalTime = new Date()
     let hours = digitalTime.getHours()
-    //I recently discovered ternary conditions so I use them pretty much any chance I can get 
-    digitalHours.innerText = `${hours > 12 ? hours - 12 : hours}`
-    digitalMinutes.innerText = digitalTime.getMinutes()
-    digitalSeconds.innerText = digitalTime.getSeconds()
+    amOrPm.innerText = `${hours > 11 ? 'PM' : 'AM'}`
+        if (hours > 12) hours = hours-12
+        if (hours < 10) hours = '0' + hours
+    digitalHours.innerText = hours
+    let minutes = digitalTime.getMinutes()
+        if (minutes < 10) minutes = '0' + minutes
+    digitalMinutes.innerText = minutes
+    let seconds = digitalTime.getSeconds()
+        if (seconds < 10) seconds = '0' + seconds
+    digitalSeconds.innerText = seconds
 }
 
 setInterval(goDigital, 1000)

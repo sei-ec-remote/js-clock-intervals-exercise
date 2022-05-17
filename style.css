@@ -31,13 +31,10 @@ h1 {
 
 #hour {
     position: absolute;
-    /* testing transform: rotate()*/
-    /* transform: rotate(90deg); */
 }
 
 #minute {
     position: absolute;
-    transform: rotate();
 }
 
 #second {
@@ -46,22 +43,32 @@ h1 {
 
 #digitalTimeContainer {
     position: fixed;
-    bottom: -20px;
+    bottom: -30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 40px;
-    text-align: center;
 }
 
 .digitalBox {
-    margin: 20px;
+    margin: 10px;
+    text-align: center;
 }
 span {
-    font-size: 30px;
+    font-size: 50px;
+    color: white;
 }
 p {
     display: inline-block;
     font-size: 60px;
     color: white;
+    background-color: #4d0026;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+#secondsDigital {
+    background: none;
+    color: #4d0026;
 }
