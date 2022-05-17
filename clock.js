@@ -16,4 +16,9 @@ setInterval(() => {
     let H = new Date().getHours() * 6 - 90;
     let S = new Date().getSeconds() * 30 - 90;
     //console.log(M) **working**
+
+    minute.style.transform = 'rotate(' + M + 'deg)';
+    hour.style.transform = 'rotate(' + H + 'deg)';
+    second.style.transform = 'rotate(' + S + 'deg)';
+    //Transform working 
 });
