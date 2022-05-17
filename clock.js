@@ -13,8 +13,8 @@ setInterval(() => {
     let second = document.getElementById("second") //Setting the Second hand ID up w/ JS
 
     let M = new Date().getMinutes() * 6 - 90; //Using newDate to grab seconds/minutes/hours for rotating w/ transform
-    let H = new Date().getHours() * 6 - 90;
-    let S = new Date().getSeconds() * 30 - 90;
+    let H = new Date().getHours() * 30 - 90;
+    let S = new Date().getSeconds() * 6 - 90;
     //console.log(M) **working**
 
     minute.style.transform = 'rotate(' + M + 'deg)';
