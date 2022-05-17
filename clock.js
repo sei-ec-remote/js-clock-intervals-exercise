@@ -6,10 +6,9 @@ const minute = document.getElementById("minute");
 // select element with id hour
 const hour = document.getElementById("hour");
 // select button
-const button = document.getElementById("btn");
-// get current hours minutes and seconds
-
-let hours = now.getHours();
+const stopBtn = document.getElementById("btn1");
+// select h1
+const h1 = document.getElementById("currentTime");
 
 // declare small functions to apply css style on elements
 // calculates degrees & apply style for seconds
@@ -22,6 +21,7 @@ function secondRotation() {
 // calculates degrees & apply style for minutes
 function minuteRotation() {
   let minutes = new Date().getMinutes();
+  console.log(minutes);
   let degrees = (minutes / 60) * 360;
   minute.style.transform = "rotate(" + degrees + "deg)";
 }
@@ -37,10 +37,10 @@ function housrRotation() {
 
 // setInterval(callback, timeinterval);
 const secondTick = setInterval(secondRotation, 1000);
-const minuteTick = setInterval(minuteRotation, 1000 * 60);
-const hourTick = setInterval(housrRotation(hours), 1000 * 60 * 60);
+const minuteTick = setInterval(minuteRotation, 1000);
+const hourTick = setInterval(housrRotation, 1000);
 
-button.addEventListener("click", () => {
+stopBtn.addEventListener("click", () => {
   clearInterval(secondTick);
   clearInterval(minuteTick);
   clearInterval(hourTick);

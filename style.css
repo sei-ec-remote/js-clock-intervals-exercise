@@ -1,34 +1,39 @@
+
 #clock {
+    display: flex;
     position: relative;
+    height: 800px;
+    justify-content: center;
 }
 
 #clock img {
     position: absolute;
+    height: 250;
+    width: 250;
 }
 
 #hour {
     z-index: 3;
-    
-    /* margin: auto; */
 }
 
-#minute {
-   
+#minute { 
     z-index: 4;
 }
 
 #second {
-
     z-index: 5;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    
 }
-
-.button {
+.btn {
+    text-align: center;
+}
+button {
+    margin: 30px;
     cursor: pointer;
     background-color: rgb(174, 154, 154);
     color: aliceblue;
