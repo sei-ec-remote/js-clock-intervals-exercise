@@ -17,14 +17,19 @@ const secondRotation = () => {
     }, 1000);
 }
 
-secondRotation();
 
-// const minutesRotation = () => {
-//     minutes = setInterval(() => {
-//      degrees = (minutes / 60) * 360;
-//     minuteEl.style.transform = "rotate(" + degrees + "deg)"
-//     }, 60000);
-// }
+const minutesRotation = () => {
+    const minutesHand = setInterval(() => {
+     degrees = (minutes / 60) * 360;
+    minuteEl.style.transform = "rotate(" + degrees + "deg)"
+    minutes++;
+    }, 60000);
+}
+
+secondRotation();
+minutesRotation();
+
+
 // const hourRotation = () => {
     
 // }
