@@ -16,6 +16,7 @@ let degrees = 6;
 
 
 let secondsCounter = null;
+let minutesCounter = null;
 
 //Create a function that will execute counter for seconds. Added a conditional so that the counter resets back to 0 after a 360 rotation along with the degree rotation on HTML.
 const secondsStart = () => {
@@ -28,10 +29,24 @@ const secondsStart = () => {
         }
         console.log(countSeconds)
     }, 1000);
+
+
     // if (countSeconds % 6 === 0) {
     //     secondsIMG.style.transform = "rotate(" + degrees + "deg)"
     // }
     // return countSeconds;
 }
 secondsStart();
+const minutesStart = () => {
+    minutesCounter = setInterval(() => {
+        countMinutes++;
+        const minutesDegrees = ((countMinutes / 60) * 360)
+        minutesIMG.style.transform = "rotate(" + minutesDegrees + "deg)"
+        if (minutesDegrees === 360) {
+            countMinutes = 0;
+        }
+        console.log(countMinutes)
+    }, 60000);
+}
+minutesStart();
 
