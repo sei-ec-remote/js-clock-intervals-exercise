@@ -4,18 +4,12 @@ let degreesSeconds = 0;
 let count = 0;
 
 const hourEl = document.getElementById("hour");
-hourEl.style.transform = "rotate(" + degreesHours + "deg)";
-
 const minuteEl = document.getElementById("minute");
-minuteEl.style.transform = "rotate(" + degreesMinutes + "deg)";
-
 const secondEl = document.getElementById("second");
-secondEl.style.transform = "rotate(" + degreesSeconds + "deg)";
 
 const hourRotation = (hours) => {
     if(hours > 12){
-        hours -= 12;
-        Math.abs(hours); 
+        hours = hours - 12;
     }
     return (hours/12) * 360;
 };
@@ -26,19 +20,17 @@ const secondRotation = (seconds) => {
     return (seconds/60) * 360;
 };
 
-const date = new Date();
-
 const allTime = () => {
-    degreesHours = date.getHours();
-    degreesMinutes = date.getMinutes();
-    degreesSeconds = date.getSeconds();
-    hourRotation(degreesHours);
-    minuteRotation(degreesMinutes);
-    secondRotation(degreesSeconds);
+    let date = new Date();
+    degreesHours = hourRotation(date.getHours());
+    degreesMinutes = minuteRotation(date.getMinutes());
+    degreesSeconds = secondRotation(date.getSeconds());
 }
 
 setInterval(() => {
     allTime();
+    hourEl.style.transform = "rotate(" + degreesHours + "deg)";
+    minuteEl.style.transform = "rotate(" + degreesMinutes + "deg)";
+    secondEl.style.transform = "rotate(" + degreesSeconds + "deg)";
     count++;
-    console.log(count);
 }, 1000);
