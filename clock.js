@@ -7,12 +7,15 @@ const hoursArray = document.getElementById("hour")
 
 
 setInterval(() => {
-const day = new Date();
-const hours = day.getMinutes() * 30;
-const minutes = day.getMinutes() * degrees;
-const seconds = day.getSeconds() * degrees;
+const now = new Date();
+const secondDegree = secondRotation(now.getSeconds());
+const minuteDegree = minuteRotation(now.getMinutes());
+const hourDegreem = hourRotation(now.getHours(),now.getMinutes());
 
-"
+
+
+
+
 hoursArray.style.transform = `rotateZ(${hours + (minutes /12)}degrees)`
 minutesArray.style.transform = `rotateZ(${minutes}degrees)`
 minutesArray.style.transform = `rotateZ(${seconds}degrees)`
