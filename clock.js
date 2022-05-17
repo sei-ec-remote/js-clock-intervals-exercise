@@ -12,20 +12,23 @@ let countSeconds = 0;
 
 let degrees = 6;
 
+
+
+
+let secondsCounter = null;
+
 //Create a function that will execute counter for seconds.
 const secondsStart = () => {
     secondsCounter = setInterval(() => {
         countSeconds++;
         console.log(countSeconds);
+        const secondsDegrees = ((countSeconds / 60) * 360)
+        secondsIMG.style.transform = "rotate(" + secondsDegrees + "deg)"
     }, 1000);
-    if (countSeconds % 6 === 0) {
-        secondsIMG.style.transform = "rotate(" + degrees + "deg)"
-    }
-    return countSeconds;
+    // if (countSeconds % 6 === 0) {
+    //     secondsIMG.style.transform = "rotate(" + degrees + "deg)"
+    // }
+    // return countSeconds;
 }
 secondsStart();
 
-
-hoursIMG.style.transform = "rotate(" + degrees + "deg)"
-minutesIMG.style.transform = "rotate(" + degrees + "deg)"
-secondsIMG.style.transform = "rotate(" + degrees + "deg)"
