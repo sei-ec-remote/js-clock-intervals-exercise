@@ -6,11 +6,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Mark's Analog Clock</h1>
     <div id="clock">
       <img id="face" src="img/clockface.png"/>
       <img id="second" src="img/second-hand.png"/>
       <img id="minute" src="img/minute-hand.png"/>
       <img id="hour" src="img/hour-hand.png"/>
+    </div>
+    <div id="digitalTimeContainer">
+      <div class="digitalBox">
+        <p id="hoursDigital">0</p>
+        <span>Hours</span>
+      </div>
+      
+      <div class="digitalBox">
+        <p id="minutesDigital">0</p>
+        <span>Minutes</span>
+      </div>
+      
+      <div class="digitalBox">
+        <p id="secondsDigital">0</p>
+        <span>Seconds</span>
+      </div>
     </div>
     <script src="clock.js"></script>
   </body>

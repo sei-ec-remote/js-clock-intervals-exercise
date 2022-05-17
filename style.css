@@ -1,14 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(#b366ff, #b3ffff, #ff4da6);
+}
+
+h1 {
+    position: fixed;
+    top: 20px;
+    font-size: 60px;
+    color: #4d0026;
+}
+
 #clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    position: absolute;
+    /* testing transform: rotate()*/
+    /* transform: rotate(90deg); */
 }
 
 #minute {
+    position: absolute;
+    transform: rotate();
 }
 
 #second {
+    position: absolute;
+}
+
+#digitalTimeContainer {
+    position: fixed;
+    bottom: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 40px;
+    text-align: center;
+}
+
+.digitalBox {
+    margin: 20px;
+}
+span {
+    font-size: 30px;
+}
+p {
+    display: inline-block;
+    font-size: 60px;
+    color: white;
 }
