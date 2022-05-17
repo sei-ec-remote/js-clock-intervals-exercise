@@ -1,7 +1,17 @@
+body {
+    background-color: red;
+}
+
 #clock {
 }
 
 #clock img {
+    position: absolute;
+    display: block;
+}
+
+.rotate {
+    /* transform: rotate(45deg); */
 }
 
 #hour {

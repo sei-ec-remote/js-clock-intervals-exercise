@@ -1,19 +1,14 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) JavaScript Clock Intervals
+<!-- # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) JavaScript Clock Intervals -->
 
-Create a webpage that displays a clock where the
-second, minute, and hour hands tick.
+<!-- Create a webpage that displays a clock where the second, minute, and hour hands tick. -->
 
-Write CSS to have the clock face, second, minute, hour
-hands all display correctly on top of each other. Make
-sure the red second hand displays on top of the minute
-and hour hand. (Try changing the order the div elements
-are written in the HTML)
+<!-- Write CSS to have the clock face, second, minute, hour hands all display correctly on top of each other.  -->
 
-Create intervals in the JavaScript file to make the
-clocks tick.
+<!-- Make sure the red second hand displays on top of the minute and hour hand. (Try changing the order the div elements are written in the HTML) -->
 
-Use CSS transform rotation to rotate the hands of the
-clock.
+Create intervals in the JavaScript file to make the clocks tick.
+
+Use CSS transform rotation to rotate the hands of the clock.
 
 ```css
 .rotate {
@@ -57,11 +52,11 @@ Get `now` by declaring a new Date object. You can google for "MDN date methods" 
 helpful methods are attached to Date objects. There's helpful things like `.getMonth()`, `.getSeconds()`
 and who knows what else!
 
-See the full list of methods in the left sidebar on this site:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+<!-- See the full list of methods in the left sidebar on this site:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date -->
 
-## Licensing
+<!-- ## Licensing
 
 All content is licensed under a CC­BY­NC­SA 4.0 license.
-All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co. -->
 
