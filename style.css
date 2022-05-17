@@ -14,14 +14,21 @@
 #hour {
     position: absolute;
     justify-content: center;
+    z-index: 0;
+    transform: rotate(30deg);
 }
 
 #minute {
     position: absolute;
     justify-content: center;
+    z-index: 1;;
+    transform: rotate(-45deg);
 }
 
 #second {
     position: absolute;
     justify-content: center;
+    z-index:2 ;
+    transform: rotate(45deg);
 }
+
