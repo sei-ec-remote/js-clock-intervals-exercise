@@ -8,6 +8,8 @@ display: grid;
 
 #face {
 grid-area: center; 
+height: 600px;
+width: 600px;
 
 }
 
