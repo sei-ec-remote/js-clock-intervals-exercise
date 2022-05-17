@@ -21,7 +21,9 @@ body {
 }
 
 #minute {
+    transform: rotate(0deg);
 }
 
 #second {
+    transform: rotate(6deg);
 }
