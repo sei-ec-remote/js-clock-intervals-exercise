@@ -23,7 +23,7 @@ const minutesFunction = setInterval(() => {
 
 const hoursFunction = setInterval(() => {
   hoursHand = hoursHand + 1;
-  hoursDegrees = (hoursHand / 216000) * 360;
+  hoursDegrees = (hoursHand / 54000) * 360;
   hoursEl.style.transform = "rotate(" + hoursDegrees + "deg)";
   console.log(hoursHand);
 }, 1000);
