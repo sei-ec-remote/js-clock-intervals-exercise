@@ -36,3 +36,33 @@ secondRotation();
 minutesRotation();
 hourRotation();
 
+//Attempted bonus (works!)
+
+// const clock = setInterval (() => {
+//     const now = new Date();
+//     let degrees = 0;
+
+//     const secondRotation = () => {
+//         const seconds = now.getSeconds();
+//         degrees = (seconds / 60) * 360;
+//         secondEl.style.transform = "rotate(" + degrees + "deg)";
+//     }
+//     secondRotation();
+
+//     const minutesRotation = () => {
+//         const minutes = now.getMinutes();
+//         degrees = (minutes / 60) * 360;
+//         minuteEl.style.transform = "rotate(" + degrees + "deg)"
+//     }
+//     minutesRotation();
+
+
+//     const hoursRotation = () => {
+//         const hour = now.getHours();
+//         degrees = (hour / 12) * 360;
+//         hourEl.style.transform = "rotate(" + degrees + "deg)"
+//     }
+
+//     hoursRotation();
+
+// }, 1000);
