@@ -1,4 +1,4 @@
-let degrees = 45;
+let degrees = 0;
 let count = 0;
 
 const hourEl = document.getElementById("hour");
@@ -20,6 +20,14 @@ const secondRotation = (seconds) => {
     return (seconds/60) * 360;
 };
 
+const allTime = (amountRotation, getTime) => {
+    return amountRotation(getTime);
+}
+
+allTime(hourRotation, Date.prototype.getHours());
+allTime(minuteRotation, Date.prototype.getHours());
+allTime(secondRotation, Date.prototype.getHours());
+
 
 const date = new Date();
 
@@ -28,5 +36,3 @@ setInterval(() => {
     console.log(date);
     console.log(count);
 }, 1000);
-
-console.log(secondRotation(59));
