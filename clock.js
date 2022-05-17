@@ -15,7 +15,7 @@ function displayTime(){
     placeHand("minute", minRotation*6)
 
     // Configuring hour rotation
-    placeHand("hour", (hourRotation%12)*30)
+    placeHand("hour", ((hourRotation + minRotation/60)%12)*30)
 }
 
 // Draws the hands! 
