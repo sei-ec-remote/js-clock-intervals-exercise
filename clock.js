@@ -10,6 +10,7 @@ const getTime = () => {
     //will multiply by 360 in function down below further
     const currentSecondsRotation = currentTime.getSeconds() / 60
     const currentMinutesRotation = (currentSecondsRotation + currentTime.getMinutes()) / 60
+    //by adding minutesRotation to hours, it keeps hour hand between the two numbers instead of making a big jump each hour
     const currentHoursRotation = (currentMinutesRotation + currentTime.getHours()) / 12
 
     rotateClockHands(secondHand, currentSecondsRotation)

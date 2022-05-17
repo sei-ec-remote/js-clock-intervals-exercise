@@ -8,7 +8,7 @@ body {
     justify-content: center;
     overflow: hidden;
     height: 100vh;
-    background: linear-gradient(#b366ff, #b3ffff, #ff4da6);
+    background: linear-gradient(90deg,#b366ff, #b3ffff, #ff4da6);
 }
 
 h1 {
@@ -56,7 +56,7 @@ h1 {
 }
 span {
     font-size: 50px;
-    color: white;
+    color: #4d0026;
 }
 p {
     display: inline-block;
