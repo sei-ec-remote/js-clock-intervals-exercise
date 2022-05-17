@@ -33,7 +33,7 @@
     text-align: center;
 }
 button {
-    margin: 30px;
+    margin: 30px auto 50px auto;
     cursor: pointer;
     background-color: rgb(174, 154, 154);
     color: aliceblue;

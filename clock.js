@@ -40,6 +40,7 @@ const secondTick = setInterval(secondRotation, 1000);
 const minuteTick = setInterval(minuteRotation, 1000);
 const hourTick = setInterval(housrRotation, 1000);
 
+// click button to stop ticking
 stopBtn.addEventListener("click", () => {
   clearInterval(secondTick);
   clearInterval(minuteTick);
