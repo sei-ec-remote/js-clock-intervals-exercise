@@ -1,12 +1,12 @@
 
-// Grab ID's for manipulation
+// Grab ID's for DOM manipulation
 let secondHand = document.getElementById('second');
 let hourHand = document.getElementById('hour');
 let minuteHand = document.getElementById('minute');
 
-
+//Function to Make clock run
 const runClock = () => {
-    const currentTime = new Date();
+    const currentTime = new Date(); //Date function lookup lines 9-12
     let minutes = currentTime.getMinutes();
     let seconds = currentTime.getSeconds();
     let hours = currentTime.getHours();
