@@ -22,3 +22,8 @@
   position: absolute;
   margin: auto;
 }
+
+/* class elements   */
+.rotate {
+  transform: rotate(0deg);
+}
