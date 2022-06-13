@@ -14,6 +14,8 @@ console.log(hourHand);
 const updateTime = () => {
     console.log('tic')
     let sec = new Date().getSeconds();
+    secDegrees = sec*6
+    secondHand.style.transform = `rotate(${secDegrees}deg)`
     // set rotation amount for second hand
     // and apply to css
     let min = new Date().getMinutes();
