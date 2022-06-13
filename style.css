@@ -16,7 +16,6 @@ body{
 
 
 #clock {
-    background-color: aliceblue;
     width: 600px;
     height: 600px;
     justify-content: center;
@@ -30,6 +29,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    width: 600px;
+    height: 600px;
 }
 
 #hour {
@@ -41,9 +42,16 @@ body{
 #minute {
     position: absolute;
     z-index: 11;
+    
 }
 
 #second {
     position: absolute;
     z-index: 12;
+}
+
+#label{
+    position: relative;
+    top: 100%;
+    text-align: center;
 }
