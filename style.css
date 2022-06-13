@@ -1,14 +1,30 @@
 #clock {
+    position:absolute;
+    z-index:2;
 }
 
 #clock img {
+    position:absolute;
+    z-index:3;
+
 }
 
 #hour {
+    position:absolute;
+    z-index:4;
+    transform:rotate(2deg)
 }
 
+
 #minute {
+    position:absolute;
+    z-index:5;
+    transform:rotate(90deg)
+
 }
 
 #second {
+    position:absolute;
+    z-index:2;
+    transform:rotate(100deg)
 }
