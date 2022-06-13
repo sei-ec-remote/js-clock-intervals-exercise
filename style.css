@@ -1,14 +1,31 @@
+body {
+    background-color: rgb(95, 94, 94);
+}
+
+
 #clock {
+    margin: auto;
+    position: relative;
+    left: 300px;
+    align-items: center;
+    width: 50%;
 }
 
 #clock img {
+    position: absolute;
+    align-items: center;
 }
 
 #hour {
+    position: absolute;
 }
 
 #minute {
+    position: absolute;
+
 }
 
 #second {
+    position: absolute;
+
 }
