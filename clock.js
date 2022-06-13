@@ -72,7 +72,7 @@ const hourHand = () => {
         hrHand.style.transform = "rotate(" + time + "deg)"
         time++
     }
-    const hourHandTimer = setInterval(hrHandMover, 620000/6)
+    const hourHandTimer = setInterval(hrHandMover, 1200000/12)
 }
 
 
