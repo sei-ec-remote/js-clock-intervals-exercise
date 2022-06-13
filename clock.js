@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", clock = () => {
     let secondDegrees = ((seconds/60) * 360)
     let minuteDegrees = ((minutes/60) * 360) + seconds/10
     let hourDegrees = (hours * 30) + (minutes/2)
-
-    secondHand.style.transform = "rotate(" + secondDegrees +"deg)"
-    minuteHand.style.transform = "rotate(" + minuteDegrees +"deg)"
+    
     hourHand.style.transform = "rotate(" + hourDegrees +"deg)"
-
+    minuteHand.style.transform = "rotate(" + minuteDegrees +"deg)"
+    secondHand.style.transform = "rotate(" + secondDegrees +"deg)"
+ 
     setTimeout(clock, 1000)
 })
