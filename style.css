@@ -24,3 +24,9 @@
     left: 0px;
     top: 0px;
 }
+
+/* every second rotates 6 deg*/
+
+.rotate {
+    transform: rotate(6deg)
+;}
