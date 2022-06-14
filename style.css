@@ -1,14 +1,23 @@
 #clock {
+    display: grid;
 }
 
 #clock img {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 #hour {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 #minute {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 #second {
+    grid-column: 1;
+    grid-row: 1;
 }
