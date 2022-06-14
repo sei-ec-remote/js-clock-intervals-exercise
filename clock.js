@@ -7,7 +7,7 @@ const hrHand = document.getElementById("hour")
 const secondHand = () => {
     let time = 1;
     const sHandMover = () => {
-        secHand.style.transform = "rotate(" + (time/60)*360 +
+        secHand.style.transform = "rotate(" + (time/60) * 360 +
          "deg)"
         time++
     }
@@ -19,23 +19,23 @@ secondHand()
 const minuteHand = () => {
     let time = 1;
     const mHandMover = () => {
-        minHand.style.transform = "rotate(" = (time/60)*360 +
+        minHand.style.transform = "rotate(" + (time/60) * 360 +
         "deg)"
        time++
     }
     const minuteHandTimer = setInterval(mHandMover, 60000)
 }
 
-hourHand()
+minuteHand()
 
 const hourHand = () => {
     let time = 1;
-    const sHandMover = () => {
-        secHand.style.transform = "rotate(" + (time/60)*360 +
+    const hHandMover = () => {
+        hrHand.style.transform = "rotate(" + (time/60) *360 +
          "deg)"
         time++
     }
-    const secondHandTimer = setInterval(sHandMover, 360000)
+    const secondHandTimer = setInterval(hHandMover, 360000)
 }
 
 hourHand()
