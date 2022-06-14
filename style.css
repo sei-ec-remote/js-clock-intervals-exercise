@@ -1,14 +1,38 @@
+body{
+    display: flex;/*dispays everything in the*/
+    justify-content: center;
+    display: flex;
+    align-items: center;/* centers content side by */
+    min-height: 100vh;
+}
+
+
+
+
 #clock {
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 #clock img {
+    
 }
 
 #hour {
+    position: absolute;
+    
 }
 
 #minute {
+    position: absolute;
+     
+    
 }
 
 #second {
+    position: absolute;
 }
