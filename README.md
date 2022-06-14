@@ -61,7 +61,7 @@ See the full list of methods in the left sidebar on this site:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 ## Licensing
-
+b
 All content is licensed under a CC­BY­NC­SA 4.0 license.
-All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+All software code is licensed under GNU GPLv3. For commercial use   q1` or alternative licensing, please contact legal@ga.co.
 
