@@ -1,14 +1,31 @@
+/* body {margin: 0 auto;} */
 #clock {
+    /* margin: 0 auto;
+    position: relative;
+    float:inline-start; */
+    /* display: flex; */
+    position: relative;
+    
 }
 
 #clock img {
+    /* justify-content: center; */
+    z-index: 0;
+    position: absolute;
 }
 
+.rotate {
+    transform: rotate(45deg)
+  }
 #hour {
+    z-index: 1;
+    /* transform: rotate(45deg);//here because helpful to see it. */
 }
 
 #minute {
+    z-index: 2;
 }
 
 #second {
+    z-index: 3;
 }
