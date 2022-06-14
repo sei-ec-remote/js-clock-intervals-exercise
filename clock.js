@@ -3,24 +3,15 @@
 // const el = document.getElementById("myElement")
 // el.style.transform = "rotate(" + degrees + "deg)"
 
-// setInterval(setClock, 1000)
-
-// function setClock() {
-//     const currentDate = new Date()
-//     const secondsRatio = currentDate.getSeconds() / 60
-//     const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
-//     const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
-
-// }
 const secondHand = document.getElementById('second')
 const minuteHand = document.getElementById('minute')
 const hourHand = document.getElementById('hour')
 
 function workingClock() {
-    const date = new Date()
-    const second = date.getSeconds()
-    const minute = date.getMinutes()
-    const hour = date.getHours()
+    const now = new Date()
+    const second = now.getSeconds()
+    const minute = now.getMinutes()
+    const hour = now.getHours()
     const hoursDegrees = minute/second+hour*30
 
     hoursRotation(hoursDegrees)
