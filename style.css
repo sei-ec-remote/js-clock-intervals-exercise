@@ -2,7 +2,6 @@
     position: relative;
     left: 300px;
     display: inline-block;
-    float: left;
 }
 
 #clock img {
@@ -14,18 +13,20 @@
     nav-left: auto;
     align-self: center;
     display: inline-block;
+    transform-origin: center;
 }
 
 #minute {
     position: absolute;
     display: inline-block;
+    transform-origin: center;
 }
 
 #second {
     position: absolute;
     display: inline-block;
     align-content: center;
-    float: left;
+    transform-origin: center;
 }
 
 .rotate {
