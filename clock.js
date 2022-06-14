@@ -28,6 +28,6 @@ const timeCount = () => {
     
 }
 
-setInterval(timeCount, 1000)
+const handsMover = setInterval(timeCount, 1000)
 
 document.addEventListener('DOMContentLoaded', timeCount)
