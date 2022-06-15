@@ -1,53 +1,30 @@
-let degrees = 45;
+ let degrees = 45;
 
-const el = document.getElementById(`second`, 'minute', `hour`)
-el.style.transform = "rotate(" + degrees + "deg)"
+ const el = document.getElementById(`second`, 'minute', `hour`)
+ el.style.transform = "rotate(" + degrees + "deg)"
 
 const secondHand = document.getElementById('second');
 const minuteHand = document.getElementById('minute');
 const hourHand = document.getElementById('hour');
 
-secondHand.style.transform = "rotate(0.25turn)"; // turn is 360 degrees, we are doing 1/4
+function makeClock() {
+    let date = new Date();
+    let hour = date.getHours() % 12;
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
 
-function setRotationInTurns(domNode, turns) {
-    const transform = `rotate(${turns}turn)`;
-    const style = domNode.style;
-    style.webkitTransform = transform;
-    style.mozTransform = transform;
-    style.msTransform = transform;
-    style.oTransform = transform;
-    style.transform = transform;
-}
+    let hourHandTurns = (hour * 30) * (0.5 * minute);
+    let minuteHandTurns = (minute * 6) * (0.1 * second);
+    let secondHandTurns =  second * 6
+    
+    
+    hourHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
+    minuteHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
+    secondHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
 
-function computeClockHandRotationsInTurns() {
-    const date = new Date();
-    return {
-        secondHandTurns : date.getSeconds() / 60,
-        minuteHandTurns : date.getMinutes() / 60,
-        hourHandTurns : (date.getHours() + date.getMinutes()/60) / 12,
     };
-}
 
-function updateClockHandRotations(){
-    const {
-        secondHandTurns,
-        minuteHandTurns,
-        hourHandTurns
-} = computeClockHandRotationsInTurns();
-
-setRotationInTurns(secondHand, secondHandTurns);
-setRotationInTurns(minuteHand, minuteHandTurns);
-setRotationInTurns(hourHand, hourHandTurns);
-
-}
-
-function disableTransition() {
-    setTimeout(() => {
-        secondHand.style.transitionProperty = "none";
-        minuteHand.style.transitionProperty = "none";
-    }, 1500);
-}
-
-disableTransition();
+    makeClock()
+ 
 
 

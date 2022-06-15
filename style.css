@@ -21,3 +21,13 @@ body {
     top: 0px;
     bottom: 0px;
 }
+
+#second
+{ animation: sec_anim 60s linear infinite;
+}
+#minute {
+    animation: min_anim 3600s linear infinite;
+}
+#hour {
+    animation: hour_anim 86400s linear infinite;
+}
