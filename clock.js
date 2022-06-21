@@ -1,7 +1,3 @@
- let degrees = 45;
-
- const el = document.getElementById(`second`, 'minute', `hour`)
- el.style.transform = "rotate(" + degrees + "deg)"
 
 const secondHand = document.getElementById('second');
 const minuteHand = document.getElementById('minute');
@@ -13,14 +9,16 @@ function makeClock() {
     let minute = date.getMinutes();
     let second = date.getSeconds();
 
-    let hourHandTurns = (hour * 30) * (0.5 * minute);
-    let minuteHandTurns = (minute * 6) * (0.1 * second);
-    let secondHandTurns =  second * 6
+    let hourHandTurns = hour * 30;
+    let minuteHandTurns = minute * 6;
+    let secondHandTurns =  second * 6;
     
     
     hourHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
-    minuteHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
-    secondHand.style.transform = 'rotate(' + hourHandTurns + 'deg)';
+    minuteHand.style.transform = 'rotate(' + minuteHandTurns + 'deg)';
+    secondHand.style.transform = 'rotate(' + secondHandTurns + 'deg)';
+
+    setTimeout(makeClock, 1000);
 
     };
 
