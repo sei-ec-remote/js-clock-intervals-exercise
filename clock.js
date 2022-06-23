@@ -20,7 +20,7 @@ const currentTime = () => {
 
 const justRun = () => {
     //Hand trackers
-    let secondTracker = (360/60) * Math.floor(Math.random()*60)
+    let secondTracker = 0//(360/60) * Math.floor(Math.random()*60)
     let minuteTracker = (360/60) * Math.floor(Math.random()*60)
     let hourTracker = (360/12) * Math.floor(Math.random()*12)
     
