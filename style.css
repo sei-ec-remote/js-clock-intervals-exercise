@@ -4,18 +4,16 @@ body{
     display: flex;
     align-items: center;/* centers content side by */
     min-height: 100vh;
+    background-color: rgb(52, 47, 107);
 }
 
 
 
 
 #clock {
-    
     justify-content: center;
     display: flex;
     align-items: center;
-    
-    
 }
 
 #clock img {
@@ -36,3 +34,6 @@ body{
 #second {
     position: absolute;
 }
+.rotate {
+    transform: rotate(30)
+  }
