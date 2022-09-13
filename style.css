@@ -2,13 +2,21 @@
 }
 
 #clock img {
+    
 }
 
 #hour {
+    transform: rotate(0deg);
 }
 
 #minute {
+    transform: rotate(0deg);
 }
 
 #second {
+    transform: rotate(0deg);
 }
+
+.inner {
+    position: absolute;
+  }
