@@ -12,41 +12,75 @@ const hourHand = document.getElementById('hour')
 // console.log(nowSecondDegrees)
 
 
-let degreeHour = 0
-const hourRotation = () => {
-    if(degreeHour < 360){
-        degreeHour+=30
-    } else if (degreeHour === 360) {
-        degreeHour = 0
-    }
-    hourHand.style.transform = "rotate(" + degreeHour + "deg)"
-}
-setInterval(hourRotation, 3600000)
+// let degreeHour = 0
+// const hourRotation = () => {
+//     if(degreeHour < 360){
+//         degreeHour+=30
+//     } else if (degreeHour === 360) {
+//         degreeHour = 0
+//     }
+//     hourHand.style.transform = "rotate(" + degreeHour + "deg)"
+// }
+// setInterval(hourRotation, 3600000)
+// let secondCounter = 0
+// let degreesMinute = 0
+// const minuteRotation = () => {
+//     if(degreesMinute < 360){
+//         degreesMinute+=6
+//     } else if (degreesMinute === 360) {
+//         degreesMinute = 0
+//     }
+//     minuteHand.style.transform = "rotate(" + degreesMinute + "deg)"
+// }
+// // setInterval(minuteRotation, 60000)
 
+// let degreesSecond = 0
+// const secondRotation = () => {
+//     if(degreesSecond < 360){
+//         degreesSecond+=5
+//     } else if (degreesSecond === 360) {
+//         degreesSecond = 0
+//     }
+//     secondHand.style.transform = "rotate(" + degreesSecond + "deg)"
+// }
+// setInterval(secondRotation,1000)
+/// whole clock wrap
+let degreesHour = 0
 let degreesMinute = 0
-const minuteRotation = () => {
-    if(degreesMinute < 360){
-        degreesMinute+=6
-    } else if (degreesMinute === 360) {
-        degreesMinute = 0
-    }
-    minuteHand.style.transform = "rotate(" + degreesMinute + "deg)"
-}
-setInterval(minuteRotation, 60000)
-
 let degreesSecond = 0
-const secondRotation = () => {
-    if(degreesSecond < 360){
-        degreesSecond+=5
-    } else if (degreesSecond === 360) {
+let secondInternval = 0
+const wholeClock = ()=> {
+    if(secondInternval < 43200){
+        degreesSecond+=6
+    } else if (secondInternval === 43200) {
         degreesSecond = 0
     }
     secondHand.style.transform = "rotate(" + degreesSecond + "deg)"
+    if(secondInternval%60===0 && secondInternval >= 60){
+        degreesMinute+=6
+    } else if (secondInternval === 43200) {
+        degreesMinute = 0
+    }
+    minuteHand.style.transform = "rotate(" + degreesMinute + "deg)"
+
+    if(secondInternval % 3600===0 && secondInternval >= 3600){
+        degreesHour+=30
+    } else if (secondInternval === 42300) {
+        degreesHour = 0
+    }
+    hourHand.style.transform = "rotate(" + degreesHour + "deg)"
+    secondInternval++
+    console.log("tick")
+    console.log(secondInternval)
+    console.log(degreesMinute)
 }
-setInterval(secondRotation,1000)
 
-
-
+setInterval(wholeClock, 1000)
+//43200 sec = 12hr
+//720 min = 12 hr // 18
+//
+//if x secondCounter / 60 === 0 
+//+1 minute rotation
 
 
 
