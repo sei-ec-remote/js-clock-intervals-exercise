@@ -38,7 +38,6 @@ const getCurrentTime = () => {
     timeInDegrees.minute =  (currentDate.getMinutes() * 6) + (currentDate.getSeconds() * .1)
     timeInDegrees.second =  currentDate.getSeconds() * 6
     run()
-    console.log(currentDate.getHours())
 }
 
 setInterval(run, 1000)
