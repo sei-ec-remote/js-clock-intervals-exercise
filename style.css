@@ -1,14 +1,35 @@
 #clock {
+    position: relative;
+    display: grid;;
+
 }
 
 #clock img {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    
 }
 
 #hour {
+    position: absolute;
+    grid-column: 2;
+    grid-row: 2;
+    transform: rotate(0deg)
 }
 
 #minute {
+    position: absolute;
+    grid-column: 3;
+    grid-row: 3;
+    transform: rotate(0deg)
 }
 
 #second {
+    position: absolute;
+    grid-column: 4;
+    grid-row: 4;
+    transform: rotate(0deg)
+
 }
+
