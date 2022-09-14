@@ -7,7 +7,7 @@ const timeCount = () => {
     const seconds = time.getSeconds()
     const minutes = time.getMinutes()
     const hours = (time.getHours() - 12)
-
+    
     const secondDegree = second => {
         return((second/60) * 360)
     }
@@ -18,9 +18,10 @@ const timeCount = () => {
         return((hour/12) * 360)
     }
 
+
 secondHand.style.transform = "rotate(" + secondDegree(seconds) + "deg)"
 minuteHand.style.transform = "rotate(" + minuteDegree(minutes) + "deg)"
-hourHand.style.transform = "rotate(" + hourDegree(hours) + "deg)"
+hourHand.style.transform = "rotate(" + hourDegree(hour) + "deg)"
 }
 setInterval(timeCount, 1000)
 
