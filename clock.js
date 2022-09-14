@@ -4,6 +4,8 @@ const hourHand = document.getElementById("hour")
 
 let degrees = 0;
 
+
+
 const secondMove = () => {
     degrees+=6
     secondHand.style.transform = "rotate(" + degrees + "deg)"
@@ -20,7 +22,7 @@ const hourMove = () => {
     return degrees
 }
 
-const countSecond = setInterval(secondMove, 1000);
+const countSecond = setInterval(secondMove, 1000)
 const countMinute = setInterval(minuteMove, 60000)
 const countHour = setInterval(hourMove, 720000)
 //720000 was used so that the hourHand will gradually move instead of jumping to each hour
