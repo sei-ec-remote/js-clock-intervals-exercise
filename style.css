@@ -1,14 +1,22 @@
 #clock {
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    display: block;
 }
 
-#clock img {
+#face {
+    transform: rotate(360deg);
 }
 
 #hour {
+    transform: translate(0%, -100%) rotate(0deg);
 }
 
 #minute {
+    transform: translate(0%, -200%) rotate(0deg);
 }
 
 #second {
+    transform: translate(0%, -300%) rotate(0deg);
 }
