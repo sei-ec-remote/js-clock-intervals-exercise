@@ -10,23 +10,32 @@ const rotaHour =() => {
     // const hourHandMov = document.getElementById("hour");
     hourHand.style.transform = `rotate(${hourDeg+1}deg)`;
     hourDeg=hourDeg+1
+    if (hourDeg == 360) {
+    hourDeg = 0;
+    }
 }
 
 const rotaMinute =() => {
     // const minuteHandMov = document.getElementById("minute");
     minuteHand.style.transform = `rotate(${minuteDeg+6}deg)`;
     minuteDeg=minuteDeg+6;
+    if (minuteDeg === 360) {
+        minuteDeg = 0;
+    }
 }
 
 const rotaSecond =() => {
     // const secondHandMov = document.getElementById("second");
         secondHand.style.transform = `rotate(${secDeg+6}deg)`;
         secDeg=secDeg+6;
+        if (secDeg === 360) {
+            secDeg = 0;
+        }
 }
 
 
 const timeFlows = () => {
-     setInterval(rotaHour, 600000);
+     setInterval(rotaHour, 60000);
      setInterval(rotaMinute, 60000);
      setInterval(rotaSecond, 1000);
 }
