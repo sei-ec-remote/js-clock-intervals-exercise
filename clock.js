@@ -1,16 +1,27 @@
-const deg = 6;
-const hour = document.querySelector('#hour');
-const minute = document.querySelector('#minute');
-const second = document.querySelector('#second');
+const hourHand = document.querySelector('#hour');
+const minuteHand = document.querySelector('#minute');
+const secondHand = document.querySelector('#second');
 
-setInterval(() => {
-    let day = new Date ();
-    let hour = day.getHours() * 30;
-    let minute = day.getMinutes() * deg;
-    let second = day.getSeconds() * deg;
+const timeCount = () => {
+    let time = new Date()
+    let seconds = time.getSeconds()
+    let minutes = time.getMinutes()
+    let hours = (time.getHours() - 12)
 
-    hour.style.transform = `rotateZ(${hour + minute / 12}deg)`;
-    minute.style.transform = `rotateZ(${minute}deg)`;
-    second.style.transform = `rotateZ(${second}deg)`;
-}, 1000);
+    const secondDegree = second => {
+        return((second/60) * 360)
+    }
+    const minuteDegree = minute => {
+        return((minute/60) * 360)
+    }
+    const hourDegree = hour => {
+        return((hour/12) * 360)
+    }
 
+    secondHand.style.transform = "rotate(" + secondDegree(seconds) + "deg)"
+    minuteHand.style.transform = "rotate(" + minuteDegree(minutes) + "deg)"
+    hourHand.style.transform = "rotate(" + hourDegree(hours) + "deg)"
+}
+setInterval(timeCount, 1000)
+
+document.addEventListener('DOMContentLoaded', timeCount)
