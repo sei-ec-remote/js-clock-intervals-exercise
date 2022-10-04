@@ -1,37 +1,26 @@
-
-let degrees = 45
+setInterval(setClock, 1000)
 
 //first get element to be able to do stuff with it
-const degrees = document.getElementById("hour")
-const degrees = document.getElementById("minute")
-const degrees = document.getElementById("second")
+const hourRotation = document.getElementById("hour")
+const minuteRotation = document.getElementById("minute")
+const secondRotation = document.getElementById("second")
 
-degrees.style.transform = "rotate(" + degrees + "deg)"
-
-
-//allows function to execute on a timer in milliseconds
-
-setInterval(minuteRotation, 60000)
-setInterval(hourRotation, 3600000)
-setInterval(secondRotation, 1000)
-
-function secondRotation(59)
-function hourRotation(5)
-function minuteRotation(30)
-
-minuteRotation()
-hourRotation()
-secondRotation()
-
-//setClock function will execute every 1000 milliseconds
-function setClock() {
-
-   
+function setClock () {
+    const currentDate = new Date()
+    const seconds = currentDate.getSeconds() /60
+    const minutes = (seconds + currentDate.getMinutes()) / 60
+    const hours = (minutes + currentDate.getHours()) / 12
+    
+    setRotation(secondRotation, seconds)
+    setRotation(minuteRotation, minutes)
+    setRotation(hourRotation, hours)
 }
 
-const now = new Date()
+function setRotation(element, rotationRatio) {
+    element.style.setProperty('--rotation', rotationRatio * 360)
+}
 
-
+setClock()
 
 
 
