@@ -8,6 +8,7 @@
 // each hand moves a certain % of 360
 const oneMove = (360 / 60)
 
+
 let secDegrees = 0
 const rotateSecond = () => {
     const secondHand = document.getElementById('second')
@@ -22,6 +23,7 @@ const rotateMinute= () => {
     minuteHand.style.transform = "rotate(" + minDegrees + "deg)"
     minDegrees = minDegrees + oneMove
 }
+// shoudl be 60000
 setInterval(rotateMinute,60000)
 
 let hourDegrees = 0
@@ -30,7 +32,8 @@ const rotateHour= () => {
     hourHand.style.transform = "rotate(" + hourDegrees + "deg)"
     hourDegrees = hourDegrees + oneMove
 }
-setInterval(rotateHour, 3600000)
+//shoudl be 36000000
+setInterval(rotateHour, 360000)
 
 
 
