@@ -1,4 +1,16 @@
+body {
+    width: 600px;
+    height: 100vh;
+}
+
 #clock {
+    width: fit-content;
+    height: min-content;
+    margin: auto;
+}
+
+#face {
+    position: relative;
 }
 
 #clock img {
@@ -11,4 +23,10 @@
 }
 
 #second {
+}
+
+.hand {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
