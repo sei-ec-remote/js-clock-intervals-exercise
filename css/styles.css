@@ -1,0 +1,23 @@
+.clock {
+
+}
+#face {
+
+}
+#second, #minute, #hour {
+    position: absolute;
+    left: 1rem;
+}
+#minute {
+    z-index:2
+}
+#second {
+    z-index: 3;
+}
+#hour {
+
+}
+
+.rotate {
+    transform: rotate(45deg)
+  }
