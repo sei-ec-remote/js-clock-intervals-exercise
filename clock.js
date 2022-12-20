@@ -1,13 +1,10 @@
-// Grabbing DOM Elements
 const secondHand = document.querySelector('#second')
 const minuteHand = document.querySelector('#minute')
 const hourHand = document.querySelector('#hour')
 
-// Functions to change hand rotations
 const secondRotation = (now) => {
     let currentSecond = now.getSeconds()
     secondHand.style.transform = 'rotate(' + (currentSecond * 6) + 'deg)'
-    console.log(`rotate(${currentSecond * 6}deg)`)
 }
 
 const minuteRotation = (now) => {
@@ -20,7 +17,6 @@ const hourRotation = (now) => {
     hourHand.style.transform = 'rotate(' + (currentHour * 30) + 'deg)'
 }
 
-// Interval Functions
 const setClock = () => {
     let now = new Date()
     secondRotation(now)
