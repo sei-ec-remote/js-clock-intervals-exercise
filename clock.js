@@ -1,5 +1,3 @@
-
-
 // It would be useful to define functions that convert seconds, 
 // minutes and hours to how many degrees the hand should be rotated around the clock!
 
@@ -11,57 +9,62 @@
 
 const now = new Date()
 
-
-
-const findTime = () => {
-
-    let hours = now.getHours()
-
-    if (hours > 12) {
-        
-        hours = hours - 12;
-    }
-    
-    console.log('hours', hours);
-    
-
-    let minutes = now.getMinutes();
-
-    console.log('minutes', minutes)
-
-    let seconds = now.getSeconds();
-
-    console.log('seconds', seconds)
-    
-}
-
-findTime();
+const second = document.getElementById("second")
+const minute = document.getElementById("minute")
+const hour = document.getElementById("hour")
 
 
 const secondRotation = () => {
 
-    // 360 / 60 = 6 degrees per second
+    // 360 deg / 60 seconds = 6 degrees per second
 
     let seconds = now.getSeconds();
 
     console.log('seconds', seconds)
 
     return 6 * seconds
+
 }
 
 console.log(secondRotation())
 
-let degrees = secondRotation();
-
-const second = document.getElementById("second")
+let secondDegrees = secondRotation();
 
 const rotate = () =>{
 
-    second.style.transform = "rotate(" + degrees + "deg)"
+    second.style.transform = "rotate(" + secondDegrees + "deg)"
 
-    degrees++
+    secondDegrees++
 
 }
 
-
 setInterval(rotate, 1000)
+
+
+const minuteRotation = () => {
+
+    // 360 deg / 60 mins = 6 degrees per minute
+
+    let minutes = now.getMinutes();
+
+    console.log('minutes', minutes)
+
+    return 6 * minutes
+}
+
+console.log(minuteRotation())
+
+let minuteDegrees = minuteRotation()
+
+const rotateMinute = () =>{
+
+    minute.style.transform = "rotate(" + minuteDegrees + "deg)"
+
+    minuteDegrees++
+
+}
+
+rotateMinute()
+
+setInterval(rotateMinute, 60000)
+
