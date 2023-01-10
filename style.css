@@ -1,14 +1,30 @@
 #clock {
+  display: flex;
+  margin: 400px 0 0 0;
+  align-items: center;
+  justify-content: center;
 }
 
 #clock img {
 }
 
 #hour {
+  transform: rotate(90deg);
 }
 
 #minute {
+  transform: rotate(90deg);
 }
 
 #second {
+  transform: rotate(90deg);
+}
+
+.rotate {
+  transform: rotate(45deg)
+}
+
+#hour, #minute, #second {
+  position: absolute;
+  transform-origin: (0% 100%);
 }
